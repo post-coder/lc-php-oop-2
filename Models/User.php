@@ -3,9 +3,9 @@
 
 class User {
 
-    public $username;
-    public $email;
-    public $password;
+    protected $username;
+    protected $email;
+    protected $password;
 
     function __construct($username, $email) {
         $this->username = $username;
@@ -23,5 +23,10 @@ class User {
         $this->password = $newPassword;
 
     }
+
+    public function getPassword() {
+        return $this->password;
+    }
+
 
 }

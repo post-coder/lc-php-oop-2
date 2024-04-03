@@ -5,12 +5,12 @@ require './Models/PremiumUser.php';
 
 // utenti standard
 $user = new User("marioRossi", "mrossi@gmail.com");
-$user->setPassword("1234");
+
 
 
 
 $premiumUser = new PremiumUser("premiumMario", "m@mail.com", 2023);
-$premiumUser->setPassword("1234");
+
 
 var_dump($user);
 var_dump($premiumUser);
