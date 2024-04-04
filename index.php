@@ -1,20 +1,6 @@
 <?php
 
-require './Models/User.php';
-require './Models/PremiumUser.php';
-
-// utenti standard
-$user = new User("marioRossi", "mrossi@gmail.com");
-
-
-
-
-$premiumUser = new PremiumUser("premiumMario", "m@mail.com", 2023);
-
-
-var_dump($user);
-var_dump($premiumUser);
-
+require './db.php';
 
 
 ?>
