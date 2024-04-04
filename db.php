@@ -18,10 +18,29 @@ $premiumUser = new PremiumUser("premiumMario", "m@mail.com", 2023);
 
 
 // pizza
-$margherita = new Pizza("Margherita", 4, 2.5, 6);
-var_dump($margherita);
-echo $margherita->setIngredients("Pomodoro, mozzarella, basilico");
-echo $margherita->getIngredients();
+
+// prova a fare questo
+// se non ci riesci, comportati così
+$error = null;
+try {
+    // qui scriviamo il codice "a rischio"
+    $margherita = new Pizza("Margherita", " ", 2.5, 5);
+
+    var_dump($margherita);
+    echo $margherita->setIngredients("Pomodoro, mozzarella, basilico");
+    echo $margherita->getIngredients();
+
+} catch (Exception $e) {
+
+    // mi salvo l'errore generato in una variabile che poi mi preoccuperò di mostrare in pagina
+    $error = "Errore: " . $e->getMessage();
+    // var_dump($e);
+
+}
+
+
+
+
 
 // echo $margherita->getAllPrices();
 

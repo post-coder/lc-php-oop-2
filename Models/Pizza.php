@@ -13,7 +13,15 @@ class Pizza extends Item {
     use HasIngredients;
 
     public $allergenes;
-
+    
+    /**
+     * __construct
+     *
+     * @param  string $name
+     * @param  float $price
+     * @param  float $priceSmall
+     * @param  float $priceBig
+     */
     function __construct($name, $price, $priceSmall, $priceBig) {
         parent::__construct($name, $price);
         

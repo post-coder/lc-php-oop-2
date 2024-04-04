@@ -20,6 +20,17 @@ require './db.php';
 <div class="container py-5">
     <h1>PHP - OOP Ereditarietà</h1>
 
+    <?php 
+    
+    if ($error) {
+        ?>
+        <div class="alert alert-warning" role="alert">
+            <?= $error ?>
+        </div>
+        <?php
+    }
+
+    ?>
 </div>
 
 <!-- bootstrap -->

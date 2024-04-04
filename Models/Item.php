@@ -13,6 +13,16 @@ class Item {
      */
     function __construct($name, $price) {
         $this->name = $name;
-        $this->price = $price;
+
+        // controlla che il prezzo fornito sia effettivamente un numero
+        if(is_numeric($price)) {
+
+            $this->price = $price;
+            
+        } else {
+            // se notiamo che sta succedendo qualcosa che non vorremmo
+            throw new Exception("Il prezzo inserito non è di valore numerico");
+        }
+            
     }
 }
